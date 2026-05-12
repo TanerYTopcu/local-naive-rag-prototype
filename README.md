@@ -9,11 +9,13 @@ Frontend : Streamlit
 Vector DB : ChromaDB
 LLM : Llama 3.2 (Locally Hosted)
 Scraping : BeautifulSoup4
+
 ---------------How It Works--------------
 1. A Decision Engine (LLM) analyzes the user's prompt to determine if external facts are required.
 2. If facts are needed, it extracts the main entity and scrapes Wikipedia.
 3. The text is chunked, embedded, and stored in a local ChromaDB instance.
 4. The most relevant chunks are retrieved and fed into the Llama 3.2 context window to generate a grounded response.
+   
 --------------Setup---------------------
 1. Clone the repository and navigate to the directory
 git clone https://github.com/TanerYTopcu/local-naive-rag-prototype.git
