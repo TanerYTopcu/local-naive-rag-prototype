@@ -23,12 +23,12 @@ if user_input:
 
     payload = {
         "user_input": user_input,
-        "memory": st.session_state.memory[:-1] # Son sorduğumuz soruyu hafızadan hariç tutarak yolluyoruz, çünkü API içinde zaten o anki soru olarak işleniyor.
+        "memory": st.session_state.memory[:-1] 
     }
 
     with st.spinner("Engines working, reasearching..."):
         try:
-            # API'ye POST isteği at
+            
             response = requests.post(API_URL, json=payload, timeout=60)
             
             if response.status_code == 200:
